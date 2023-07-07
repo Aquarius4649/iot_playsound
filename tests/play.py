@@ -1,8 +1,7 @@
-from playsound import playsound
+import pygame.mixer
 
-
-# Provide the path to the sound file
-sound_file = "aisatu.mp3"
-
-# Play the sound
-playsound(sound_file)
+pygame.mixer.init()
+wav_sound = pygame.mixer.Sound('./sound.wav')
+wav_sound.play()
+while pygame.mixer.get_busy():
+    pass
