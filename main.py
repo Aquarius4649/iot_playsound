@@ -18,8 +18,8 @@ while True:
     if(GPIO.input(GPIO_PIN) == GPIO.HIGH):
         print("反応あり")
         play_sound()  # call the function to play the sound
-        time.sleep(1)
+        time.sleep(3)
 
     else:
         print("反応なし")
-        time.sleep(1)
+        time.sleep(3)
