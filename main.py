@@ -17,7 +17,7 @@ while True:
             pygame.mixer.music.play()  # Play the sound
             while pygame.mixer.music.get_busy():  # Wait for the sound to finish playing
                 time.sleep(1)
-            time.sleep(3)  # Sleep for 3 seconds
+            time.sleep(2)  # Sleep for 3 seconds
 
     else:
         print("反応なし")
