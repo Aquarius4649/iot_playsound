@@ -8,17 +8,17 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(GPIO_PIN, GPIO.IN)
 
 pygame.mixer.init()
-sound = pygame.mixer.Sound('./sound.wav')
-
-def play_sound():
-    if not pygame.mixer.get_busy():  # This line checks if there is a sound playing currently
-        sound.play()
-        time.sleep(3)  # Add the sleep here, after the sound is played
+pygame.mixer.music.load('./sound.wav')
 
 while True:
     if GPIO.input(GPIO_PIN) == GPIO.HIGH:
         print("反応あり")
-        play_sound()  # call the function to play the sound
+        if not pygame.mixer.music.get_busy():  # Check if there is a music playing currently
+            pygame.mixer.music.play()  # Play the sound
+            while pygame.mixer.music.get_busy():  # Wait for the sound to finish playing
+                time.sleep(1)
+            time.sleep(3)  # Sleep for 3 seconds
 
     else:
         print("反応なし")
+        time.sleep(1)  # This sleep is to wait between checks of the GPIO pin
