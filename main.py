@@ -22,4 +22,3 @@ while True:
 
     else:
         print("反応なし")
-        time.sleep(3)  # This sleep is to wait between checks of the GPIO pin
