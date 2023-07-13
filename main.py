@@ -20,6 +20,9 @@ while True:
             print(num)
             num = random.randint(1, 7)
             print(num)
+            print(file_name)
+            file_name = "./" + str(num) + ".wav"
+            print(file_name)
             pygame.mixer.music.play()  # Play the sound
             while pygame.mixer.music.get_busy():  # Wait for the sound to finish playing
                 time.sleep(1)
