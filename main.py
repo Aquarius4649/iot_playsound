@@ -23,6 +23,7 @@ while True:
             pygame.mixer.init()
             print(file_name)
             file_name = "./" + str(num) + ".wav"
+            pygame.mixer.music.load(file_name)
             print(file_name)
             pygame.mixer.music.play()  # Play the sound
             while pygame.mixer.music.get_busy():  # Wait for the sound to finish playing
