@@ -20,6 +20,7 @@ while True:
             print(num)
             num = random.randint(1, 7)
             print(num)
+            pygame.mixer.init()
             print(file_name)
             file_name = "./" + str(num) + ".wav"
             print(file_name)
