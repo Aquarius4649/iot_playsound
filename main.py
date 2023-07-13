@@ -9,7 +9,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(GPIO_PIN, GPIO.IN)
 
 pygame.mixer.init()
-file_name = "./" num + ".wav"
+file_name = "./" + num + ".wav"
 pygame.mixer.music.load(file_name)
 
 while True:
